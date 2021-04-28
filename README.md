@@ -1,1 +1,1 @@
-# https://github.com/MrKenta/rsschool-cv/blob/gh-pages/cv.md
+ <https://MrKenta.github.io/rsschool-cv/cv>
