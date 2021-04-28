@@ -1,37 +1,61 @@
-## Welcome to GitHub Pages
+## rsschool-cv
 
-You can use the [editor on GitHub](https://github.com/MrKenta/rsschool-cv/edit/gh-pages/README.md) to maintain and preview the content for your website in Markdown files.
+### RAMAN KRUTSIOU
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Contact Info
 
-### Markdown
+1. E-mail: mrsaiti14@icloud.com
+2. Mobile: +375(33)647-92-45
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Summary 
 
-# Header 1
-## Header 2
-### Header 3
+My main goal is to improve my skills and knowledge in iOS.
 
-- Bulleted
-- List
+## Skills
 
-1. Numbered
-2. List
+1. Swift
+2. Objective - C
 
-**Bold** and _Italic_ and `Code` text
+## Code examples
 
-[Link](url) and ![Image](src)
-```
+import Foundation
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+class Download {
 
-### Jekyll Themes
+    var stringURL = ""
+    
+    func downloader(completion: @escaping (Data) -> Void) {
+        guard let fileManager = Bundle.main.path(forResource:"URL", ofType:"txt") else { return }
+        do{
+            let content = try! String(contentsOfFile: fileManager)
+            stringURL = content
+        }
+        
+        guard let url = URL(string: stringURL.trimmingCharacters(in: .whitespacesAndNewlines)) else { return }
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+            guard let dataImage = data else { return }
+            completion(dataImage)
+        }.resume()
+        
+    }
+}
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MrKenta/rsschool-cv/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Education 
 
-### Support or Contact
+### Belarusian National Technical University
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+MECHANICAL ENGINEERING TECHNOLOGY  2014 - 2019
+
+### Teach Me Skills 
+
+iOS Development
+
+
+## English
+
+Pre-intermediate +
+
+
+
